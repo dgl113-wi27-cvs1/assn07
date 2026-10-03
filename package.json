@@ -1,0 +1,30 @@
+{
+  "name": "dgl-113-2024wi-a7",
+  "version": "1.0.0",
+  "description": "DGL 113 2024WI Assignment #7",
+  "scripts": {
+    "test": "jest",
+    "test-case1": "jest -t 'case1'",
+    "test-case2": "jest -t 'case2'",
+    "test-case3": "jest -t 'case3'",
+    "test-case4": "jest -t 'case4'",
+    "test-case5": "jest -t 'case5'",
+    "test-case6": "jest -t 'case6'",
+    "test-case7": "jest -t 'case7'",
+    "test-case8": "jest -t 'case8'",
+    "test-case9": "jest -t 'case9'"
+  },
+  "author": "Brian Koehler",
+  "license": "MIT",
+  "jest": {
+    "preset": "jest-puppeteer"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-puppeteer": "^9.0.2",
+    "puppeteer": "^21.6.1"
+  }
+}

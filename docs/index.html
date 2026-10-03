@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex nofollow" />
+    <title>Hot Drink Order</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <header>
+      <h1>Hot Drink Order</h1>
+      <p>yum</p>
+    </header>
+
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>Quantity</th>
+            <th>Size</th>
+            <th>Description</th>
+            <th>Add/Delete</th>
+          </tr>
+          <tr>
+            <td>
+              <select id="quantity">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+              </select>
+            </td>
+            <td>
+              <select id="size">
+                <option>Short (236ml)</option>
+                <option>Tall (354ml)</option>
+                <option>Grande (473ml)</option>
+                <option>Venti (591ml)</option>
+              </select>
+            </td>
+            <td>
+              <select id="description">
+                <option>Blonde Roast Coffee</option>
+                <option>Medium Roast Coffee</option>
+                <option>Dark Roast Coffee</option>
+                <option>Earl Grey Tea</option>
+                <option>English Breakfast Tea</option>
+              </select>
+            </td>
+            <td>
+              <button type="button" id="addItem">Add item</button>
+            </td>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      Total cost: <span id="totalCost"></span>
+    </main>
+
+    <footer>
+      <p>DGL 113 2025WI Assignment #7</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

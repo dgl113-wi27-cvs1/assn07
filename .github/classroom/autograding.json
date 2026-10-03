@@ -1,0 +1,94 @@
+{
+  "tests": [
+    {
+      "name": "case1",
+      "setup": "npm install",
+      "run": "npm run test-case1",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "case2",
+      "setup": "",
+      "run": "npm run test-case2",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "case3",
+      "setup": "",
+      "run": "npm run test-case3",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "case4",
+      "setup": "",
+      "run": "npm run test-case4",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "case5",
+      "setup": "",
+      "run": "npm run test-case5",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "case6",
+      "setup": "",
+      "run": "npm run test-case6",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "case7",
+      "setup": "",
+      "run": "npm run test-case7",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "case8",
+      "setup": "",
+      "run": "npm run test-case8",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "case9",
+      "setup": "",
+      "run": "npm run test-case9",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    }
+  ]
+}
