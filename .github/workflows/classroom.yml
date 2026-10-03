@@ -1,19 +1,47 @@
-name: GitHub Classroom Workflow
+# Autograding: runs the tests in .github/classroom/autograding.json on every push
+# and shows the student their points. Replaces the old GitHub Classroom action
+# (education/autograding), using the same autograding.json, so tests and points
+# stay exactly as they are.
+name: Autograding
 
 on:
-  - push
-  - workflow_dispatch
+  push:
+  workflow_dispatch:
 
 permissions:
-  checks: write
-  actions: read
   contents: read
+  statuses: write
+
+concurrency:
+  group: autograding-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  build:
+  autograding:
     name: Autograding
+    # Don't run in the template itself, only in students' copies.
+    if: ${{ !github.event.repository.is_template }}
     runs-on: ubuntu-latest
-    if: github.actor != 'github-classroom[bot]'
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - uses: education/autograding@v1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # Puppeteer's Chrome download, reused between runs to save time.
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/puppeteer
+          key: puppeteer-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+      # Ubuntu 24.04 blocks the sandbox Chrome uses; this allows it again.
+      - name: Allow Chrome's sandbox
+        run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0 || true
+
+      - name: Run the autograding tests
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node .github/autograde/run-autograding.mjs
